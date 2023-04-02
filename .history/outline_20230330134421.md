@@ -1,0 +1,96 @@
+# Gulp là gì?
+
+Gulp là công cụ xây dựng(built tool) Javascript, được xây dựng để tự động hóa các tác vụ như đóng gói mã nguồn, tối ưu hóa hình ảnh, biên dịch mã CSS và JavaScript, tạo file HTML từ các file template, và nhiều tác vụ khác trong quá trình phát triển web.
+Gulp được phát triển trên nền tảng Node.js và được viết bằng JavaScript. Nó có thể được sử dụng để tối ưu hóa quy trình phát triển web và giảm thiểu thời gian và công sức cần thiết để thực hiện các tác vụ này thủ công.
+
+# Components là gì?
+
+"Component" là một thuật ngữ được sử dụng trong phát triển phần mềm để chỉ một phần của một ứng dụng hoặc hệ thống được xây dựng để thực hiện một chức năng cụ thể.
+
+Trong lập trình web, một component thường được hiểu là một phần tử giao diện người dùng (user interface element) độc lập, có thể tái sử dụng được trong các trang web khác nhau. Các component thông thường bao gồm các phần tử HTML, CSS và JavaScript, và thường được thiết kế để có thể nhận vào các đầu vào và tạo ra các đầu ra khác nhau tùy thuộc vào việc sử dụng của chúng.
+
+# Tại sao dùng Gulp mà không code thuần?
+
+# Pug là gì?
+
+# Tìm hiểu file layout trong pug
+
+Trong Pug (trước đây được gọi là Jade), file layout là một file template chung được sử dụng để chứa các phần của các trang web khác nhau, chẳng hạn như header, footer, menu và các phần cố định khác. Nó giúp giảm thiểu sự trùng lặp trong mã HTML và cho phép bạn tái sử dụng các phần của trang web một cách dễ dàng.
+Để sử dụng file layout trong Pug, bạn có thể sử dụng từ khóa **extends** để chỉ định file layout và sử dụng từ khóa **block** để định nghĩa các phần cụ thể của trang web
+
+# Các kiến thức cơ bản về Pug?
+
+Viết dưới dạng HTML
+`<input type="text" name="email" placeholder="Giang">`
+Viết dưới dạng Pug
+`input(type="text" name="email" placeholder="Giang")`
+Đối với các thẻ mà có các cấp con
+
+> Đối với file .pug
+
+```
+    .box
+		h2.box-heading box-heading
+		span box-span
+		ul
+			li abc
+```
+
+> Render ra file.html
+
+```
+    <div class="box">
+        <h2 class="box-heading">box-heading </h2><span>box-span </span>
+        <ul>
+          <li>abc</li>
+        </ul>
+    </div>
+```
+
+# Mixins trong pug
+
+Trong Pug, Mixins là một tính năng cho phép bạn định nghĩa một đoạn mã có thể được sử dụng lại nhiều lần trong template của bạn. Mixins được sử dụng để giảm thiểu sự trùng lặp trong mã và cho phép bạn tái sử dụng các đoạn mã một cách dễ dàng.
+
+Để định nghĩa một mixin, bạn sử dụng từ khóa mixin và đặt tên cho mixin. Bên trong mixin, bạn có thể định nghĩa các tham số (nếu có) và các câu lệnh HTML/Pug tương ứng với mixin đó.
+
+# Biến trong pug
+
+# Điều kiện trong pug
+
+# Cấu trúc thư mục style của Sass
+
+> Pattern 7 - 1 của Sass
+
+# Before và After trong css
+
+Là các pseudo-class trong CSS được sử dụng để thêm nội dung vào các phần tử HTML mà không cần phải thay đổi cấu trúc HTML. Chúng cho phép bạn thêm các nội dung, hình ảnh hoặc các phần tử trang trí khác vào các phần tử HTML bằng cách sử dụng CSS.
+
+Pseudo-class "before" cho phép bạn thêm nội dung vào phía trước của phần tử HTML được chọn, trong khi pseudo-class "after" cho phép bạn thêm nội dung vào phía sau của phần tử HTML được chọn. Để sử dụng pseudo-class before và after, bạn có thể sử dụng thuộc tính content trong CSS để định nghĩa nội dung muốn thêm vào phần tử HTML. Ví dụ
+
+```
+  .my-element:before {
+    content: "Trước đó";
+  }
+
+  .my-element:after {
+    content: "Sau đó";
+  }
+```
+
+> Trong ví dụ trên, class "my-element" là phần tử HTML được chọn. Nội dung "Trước đó" sẽ được thêm vào phía trước của phần tử HTML và nội dung "Sau đó" sẽ được thêm vào phía sau của phần tử HTML.
+
+# Position relative, absolute trong css
+
+Khi một phần tử được định vị bằng position: relative, nó sẽ đặt vị trí của nó dựa trên vị trí ban đầu của nó trong luồng tài liệu (document flow). Nếu bạn đặt thuộc tính top, bottom, left hoặc right, phần tử sẽ di chuyển so với vị trí ban đầu của nó. Tuy nhiên, các phần tử khác sẽ không bị ảnh hưởng bởi sự thay đổi này và vẫn sẽ nằm trong luồng tài liệu ban đầu.
+
+Khi một phần tử được định vị bằng position: absolute, nó sẽ được đặt vị trí tuyệt đối so với phần tử cha đầu tiên không phải là static (ví dụ như position: relative, position: absolute hoặc position: fixed). Nếu không có phần tử cha nào được định vị bằng các giá trị này, phần tử sẽ được đặt vị trí tuyệt đối so với body.
+
+# Lưu ý với các phần tử có kiểu hiển thị là inline
+
+Các phần tử có kiểu hiển thị inline (như <span>, <a>, ...) sẽ bị hạn chế một số phương thức CSS so với các phần tử có kiểu hiển thị khác như block hay inline-block.
+
+Các phần tử inline không thể áp dụng một số thuộc tính như width, height, padding-top, padding-bottom, margin-top, margin-bottom. Bởi vì các thuộc tính này sẽ không có tác dụng khi được áp dụng trên các phần tử có kiểu hiển thị inline.
+
+Tuy nhiên, các thuộc tính như color, font-size, text-decoration,... vẫn có thể được áp dụng cho các phần tử inline.
+
+Để check một số thẻ, thẻ nào có kiểu hiển thị là inline , inline-block , hay block có thể tham khảo ơ [htmlreference](https://htmlreference.io/)

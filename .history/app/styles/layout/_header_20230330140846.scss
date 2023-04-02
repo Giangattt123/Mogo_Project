@@ -1,0 +1,189 @@
+.header {
+  min-height: 100rem;
+  background: linear-gradient(
+      to bottom,
+      rgba($primary-color, 0.8),
+      rgba($secondary-color, 0.8)
+    ),
+    url(../images/img-header-bg.jpg) no-repeat center / cover;
+  color: #fff;
+  &-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  &-menu-link {
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 1rem;
+  }
+  &-menu-icon {
+    color: #fff;
+  }
+  &-top {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &-menu {
+    display: flex;
+    // Màn hình từ 768px trở lên thì ta mới cho có
+    // &-item:not(:first-child) {
+    //   margin-left: 5rem;
+    // }
+  }
+  &-content {
+    padding-top: 17rem;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    &-caption {
+      font-size: 7.2rem;
+      font-family: $third-font;
+      margin-bottom: 3rem;
+    }
+    &-main {
+      font-size: 15rem;
+      font-weight: bold;
+      padding-bottom: 7rem;
+      margin-bottom: 5rem;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 0.5rem;
+        background-color: #fff;
+      }
+    }
+    &-more {
+      text-transform: uppercase;
+      color: #fff;
+      border: 4px solid #fff;
+      padding: 1rem 3rem;
+      font-weight: bold;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+  &-bottom {
+    margin-top: 15.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    &-item {
+      padding-top: 2.5rem;
+      border-top: 5px solid #fff;
+      width: calc(25% - 3rem);
+      margin-left: 3rem;
+      flex-wrap: wrap;
+      opacity: 0.6;
+      position: relative;
+      cursor: pointer;
+    }
+    &-item:before {
+      content: "";
+      height: 0.5rem;
+      width: 7rem;
+      background-color: $primary-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+    &-item:hover,
+    &-item.is-active {
+      opacity: 1;
+      &:before {
+        opacity: 1;
+      }
+    }
+    &-text {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      margin-left: 1rem;
+    }
+    &-number {
+      font-weight: bold;
+      font-size: 2.4rem;
+      // margin-right: 1rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .header-menu-item:not(:first-child) {
+      margin-left: 5rem;
+    }
+    .header-menu-link {
+      color: #fff;
+      text-transform: uppercase;
+      display: inline-block;
+      border-bottom: 4px solid transparent;
+      transition: all 0.25s linear;
+      .header-menu-link:hover {
+        color: $secondary-color;
+        border-bottom-color: $secondary-color;
+        font-weight: 600;
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    min-height: unset;
+    .header-bottom {
+      margin-top: 10rem;
+    }
+    .header-content {
+      padding-top: 10rem;
+    }
+    .header-content-main {
+      font-size: 10rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .header-menu,
+    .header-bottom-text {
+      display: none;
+    }
+    .header-content-caption {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .header-content-main {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+    }
+    .header-bottom-item:before {
+      width: 35%;
+    }
+    .header-bottom-item {
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+    .header-bottom {
+      margin-top: 5rem;
+    }
+    .header-content {
+      padding-top: 5rem;
+    }
+    .header-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      width: 30rem;
+      display: block;
+      padding: 2rem 2.5rem;
+    }
+    .header-menu-link {
+      color: $title-color;
+      width: 100%;
+    }
+  }
+}
